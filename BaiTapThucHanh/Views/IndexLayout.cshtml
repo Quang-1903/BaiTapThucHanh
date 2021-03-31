@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Nautica X</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="~/CSS/main.css" rel="stylesheet" type="text/css" media="screen, projection"/>
+    
+</head>
+<body>
+    <div id="outer-wrapper">
+        <div id="inner-wrapper">
+            <div id="content-wrapper">
+                <div id="content">
+                    @*<form name="frmTimKiem" action="@Url.Action("KetQuaTimKiem","TimKiem")" id="search-form">
+                        <input type="text" class="txt" value="Search" />
+                    </form>*@
+                        @using (Html.BeginForm("KetQuaTimKiem", "TimKiem", FormMethod.Post))
+                        {
+                            
+                            @Html.TextBox("txtTimKiem", "", htmlAttributes: new { @class = "txt", @plceholder = "Nhap san pham tim kiem" })
+                            <button type="submit"> Tim Kiem</button>
+                        }
+                        <ul id="nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Newsletters</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <div id="content-inner">
+                            @*<div class="content-left">
+                    <img src="~/Image/nyc-photo.jpg" alt="NYC Photo" />
+                    <p>
+                        NEW YORK<br />
+                        <span>Central Park in the fall 2006</span>
+                    </p>
+                </div>*@
+                            <div class="content-right">
+                                @RenderBody()
+                                @*<img src="~/Image/bldg-pic.jpg" alt="" class="content-img" />
+                    <p class="intro">The padding on the paragraphs leaves enough room so that the text and image have enough space to breath. In this template we are experimenting with text as a design aspect. It is imparative to chose your fonts well, and to chose different types and sizes and colors to really use the font as a design paintbrush.</p>
+                    <p>For this template we are keeping it simple enough as to let the focus be on the content, not the design. You can hop into the style sheet and increase the font color if you find these colors are too light. We hope you enjoy our designs and drop us a line as we always like to see our designs in action!</p>
+                    <p>Thank you from STUDIO7DESIGNS Victoria BC Canada.</p>
+                    <p class="end-story-links"><a href="#">37 Comments</a> | <a href="#">Read on...</a></p>*@
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="sidebar">
+                    <div id="logo"> <img src="~/Image/nautica-logo.gif" alt="Nautica X" /> </div>
+                    <h4>Loại Sản Phẩm</h4>
+                    <ul class="side-nav">
+                        @Html.Action("ChuDePartial","Home")
+                    </ul>
+                    <h4>Archives</h4>
+                    <ul class="side-nav">
+                        <li><a href="#">January 2007</a></li>
+                        <li><a href="#">December 2006</a></li>
+                        <li><a href="#">November 2006</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer">
+                <ul id="footer-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Your Blog</a></li>
+                    <li><a href="#">Your Services</a></li>
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Links</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Top Listings</a></li>
+                    <li><a href="#">Magazine</a></li>
+                    <li class="last"><a href="#">Open Source</a></li>
+                </ul>
+                <p class="copyright">Copyright 2007 Your Name | <a href="http://www.studio7designs.com">Design by Studio7Designs</a> | <a href="http://www.slicendiceit.com">Coding by Slice 'n Dice</a> | <a href="#">We Support OST.org</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

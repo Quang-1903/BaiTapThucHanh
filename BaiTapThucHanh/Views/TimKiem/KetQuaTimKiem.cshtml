@@ -1,0 +1,138 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@model IPagedList<BaiTapThucHanh.Models.tDanhMucSP>
+
+@{
+    ViewBag.Title = "KetQuaTimKiem";
+    Layout = "~/Views/IndexLayout.cshtml";
+}
+
+<h2>KetQuaTimKiem</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NganLapTop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MauSac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().CanNang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().DoNoi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaDacTinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Website)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().ThoiGianBaoHanh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().GioiThieuSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Gia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().ChietKhau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Anh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().tChatLieu.ChatLieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().tHangSX.HangSX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().tKichThuoc.KichThuoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().tLoaiDT.TenLoai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().tLoaiSP.Loai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().tQuocGia.TenNuoc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NganLapTop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MauSac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CanNang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoNoi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaDacTinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Website)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThoiGianBaoHanh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GioiThieuSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChietKhau)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Anh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tChatLieu.ChatLieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tHangSX.HangSX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tKichThuoc.KichThuoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tLoaiDT.TenLoai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tLoaiSP.Loai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tQuocGia.TenNuoc)
+        </td>
+      
+    </tr>
+}
+
+</table>
